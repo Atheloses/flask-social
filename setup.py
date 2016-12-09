@@ -19,12 +19,12 @@ from setuptools import setup
 
 setup(
     name='Flask-Social',
-    version='1.6.2',
+    version='1.6.3',
     url='https://github.com/mattupstate/flask-social',
     license='MIT',
     author='Matthew Wright',
     author_email='matt@nobien.net',
-    description='Simple OAuth provider integration for Flask-Security',
+    description='Fork: get email from facebook. Simple OAuth provider integration for Flask-Security',
     long_description=__doc__,
     packages=[
         'flask_social',
@@ -35,7 +35,8 @@ setup(
     platforms='any',
     install_requires=[
         'Flask-Security>=1.6.9',
-        'Flask-OAuthlib==0.5.0'
+        'Flask-OAuthlib==0.5.0',
+
     ],
     test_suite='nose.collector',
     tests_require=[

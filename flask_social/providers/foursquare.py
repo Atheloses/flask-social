@@ -12,7 +12,7 @@
 from __future__ import absolute_import
 
 import foursquare
-import urlparse
+import urlparse3 as urlparse
 
 config = {
     'id': 'foursquare',
