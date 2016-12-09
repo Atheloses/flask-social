@@ -35,7 +35,8 @@ def get_api(connection, **kwargs):
 def get_provider_user_id(response, **kwargs):
     if response:
         graph = facebook.GraphAPI(response['access_token'])
-        profile = graph.get_object("me")
+        args = {'fields':'id,name,email'}
+        profile = graph.get_object('me', **args)
         return profile['id']
     return None
 
@@ -46,7 +47,8 @@ def get_connection_values(response, **kwargs):
 
     access_token = response['access_token']
     graph = facebook.GraphAPI(access_token)
-    profile = graph.get_object("me")
+    args = {'fields':'id,name,email'}
+    profile = graph.get_object('me', **args)
     profile_url = "http://facebook.com/profile.php?id=%s" % profile['id']
     image_url = "http://graph.facebook.com/%s/picture" % profile['id']
 
